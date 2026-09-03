@@ -26,8 +26,8 @@ public class User {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof User user)) return false;
-        return Objects.equals(email, user.email);
+        if (o == null || o.getClass() != getClass()) return false;
+        return Objects.equals(email, ((User)o).email);
     }
 
     @Override
